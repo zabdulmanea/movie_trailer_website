@@ -8,7 +8,7 @@ A python program generates `HTML` page which displays list of favorite movies, y
 You need **Python 2.7.x** (built using `2.7.15`) and a web browser.
 
 ## Contents
-There are three python files (excluding this `README.md`):
+There are three python files:
 * **fresh_tomatoes.py**:  a web page generator. It takes in a list of movies, generate the `HTML` page then display this page into your browser.
 
 * **media.py**: provides Movie class that contains the structure to create a movie.
