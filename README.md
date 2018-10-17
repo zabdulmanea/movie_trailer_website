@@ -16,10 +16,10 @@ There are three python files:
 * **entertainment_center.py**: main python script that contains movies list. You need this file to run the program.
 
 ## Run the Project
-**1.** Download/Clone the project to your computer.
-**2.**  Open terminal then navigate to project directory.
-**3.** Run `python entertainment_center.py`.
-**4.** Your default browser should launch a page that contains the movies.
+1. Download/Clone the project to your computer.
+2. Open terminal then navigate to project directory.
+3. Run `python entertainment_center.py`.
+4. Your default browser should launch a page that contains the movies.
 
 ## Copyright and License
 `fresh_tomatoes.py` supllied by [Udacity](https://sa.udacity.com/).
