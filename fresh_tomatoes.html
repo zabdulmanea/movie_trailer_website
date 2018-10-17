@@ -1,0 +1,329 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Zai Movies!</title>
+
+    <!-- Bootstrap 3 -->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <style type="text/css" media="screen">
+        body {
+            padding-top: 80px;
+            background-image:url("images/maxresdefault.png");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+        }
+        #trailer .modal-dialog {
+            margin-top: 200px;
+            width: 640px;
+            height: 480px;
+        }
+        .hanging-close {
+            position: absolute;
+            top: -12px;
+            right: -12px;
+            z-index: 9001;
+        }
+        #trailer-video {
+            width: 100%;
+            height: 100%;
+        }
+        .movie-tile {
+            margin-bottom: 20px;
+            padding-top: 20px;
+        }
+        .movie-tile:hover {
+            background: rgba(207, 238, 233, 0.5);
+            cursor: pointer;
+            border-radius: 5%;
+        }
+        .scale-media {
+            padding-bottom: 56.25%;
+            position: relative;
+        }
+        .scale-media iframe {
+            border: none;
+            height: 100%;
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 0;
+            background-color: #218969;
+        }
+    </style>
+    <script type="text/javascript" charset="utf-8">
+        // Pause the video when the modal is closed
+        $(document).on('click', '.hanging-close, .modal-backdrop, .modal', function (event) {
+            // Remove the src so the player itself gets removed, as this is the only
+            // reliable way to ensure the video stops playing in IE
+            $("#trailer-video-container").empty();
+        });
+        // Start playing the video whenever the trailer modal is opened
+        $(document).on('click', '.movie-tile', function (event) {
+            var trailerYouTubeId = $(this).attr('data-trailer-youtube-id')
+            var sourceUrl = 'http://www.youtube.com/embed/' + trailerYouTubeId + '?autoplay=1&html5=1';
+            $("#trailer-video-container").empty().append($("<iframe></iframe>", {
+              'id': 'trailer-video',
+              'type': 'text-html',
+              'src': sourceUrl,
+              'frameborder': 0
+            }));
+        });
+        // Animate in the movies when the page loads
+        $(document).ready(function () {
+          $('.movie-tile').hide().first().show("fast", function showNext() {
+            $(this).next("div").show("fast", showNext);
+          });
+        });
+    </script>
+</head>
+
+  <body>
+    <!-- Trailer Video Modal -->
+    <div class="modal" id="trailer">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <a href="#" class="hanging-close" data-dismiss="modal" aria-hidden="true">
+            <img src="https://lh5.ggpht.com/v4-628SilF0HtHuHdu5EzxD7WRqOrrTIDi_MhEG6_qkNtUK5Wg7KPkofp_VJoF7RS2LhxwEFCO1ICHZlc-o_=s0#w=24&h=24"/>
+          </a>
+          <div class="scale-media" id="trailer-video-container">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Page Content -->
+    <div class="container">
+      <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#"> Zai Movie Trailers</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="dgOGqWHtjP0" data-toggle="modal" data-target="#trailer">
+    <img src="https://upload.wikimedia.org/wikipedia/ar/1/13/%D9%85%D9%84%D8%B5%D9%82_%D9%81%D9%8A%D9%84%D9%85_%D8%AD%D9%8A%D8%A7%D8%A9_%282017%29.jpg" width="220" height="342">
+    <h2>Life 2017</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="SAIaJOIx_2M" data-toggle="modal" data-target="#trailer">
+    <img src="http://photo.elcinema.com.s3.amazonaws.com/uploads/_640x_3aba8138970853f8032b0fc5aba951f4b0e3a4f48fa7ecc5373843f7e9e4b947.jpg" width="220" height="342">
+    <h2>Distorted 2018</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="90a88XoQA8I" data-toggle="modal" data-target="#trailer">
+    <img src="https://upload.wikimedia.org/wikipedia/ar/a/a4/Game_Night_%28film%29.png" width="220" height="342">
+    <h2>Game Night 2018</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="dt__kig8PVU" data-toggle="modal" data-target="#trailer">
+    <img src="https://upload.wikimedia.org/wikipedia/ar/2/23/IsleOfDogsFirstLook.jpg" width="220" height="342">
+    <h2>Isle of Dogs 2018</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="R2Xbo-irtBA" data-toggle="modal" data-target="#trailer">
+    <img src="http://photo.elcinema.com.s3.amazonaws.com/uploads/_640x_c8ceb001295ec477349beb61adf5f8d8c5d026f46711bbef17d02027c9213a87.jpg" width="220" height="342">
+    <h2> A Monster Calls 2016</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="AMgyWT075KY" data-toggle="modal" data-target="#trailer">
+    <img src="http://photo.elcinema.com.s3.amazonaws.com/uploads/_640x_5a50a917eec6d52adc2c7e420d1d591ca18d7d7b839102159403dc8860faa339.jpg" width="220" height="342">
+    <h2>Arrival 2016</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="Jit3YhGx5pU" data-toggle="modal" data-target="#trailer">
+    <img src="https://upload.wikimedia.org/wikipedia/ar/8/86/Three_billboards_outside_ebbing_missouri_xlg.jpg" width="220" height="342">
+    <h2>THREE BILLBOARDS OUTSIDE EBBING, MISSOURI 2017</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="nfK6UgLra7g" data-toggle="modal" data-target="#trailer">
+    <img src="https://images-na.ssl-images-amazon.com/images/I/71XgkPJSEsL._SY445_.jpg" width="220" height="342">
+    <h2>A Silent Voice 2016</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="KXHrCBkIxQQ" data-toggle="modal" data-target="#trailer">
+    <img src="https://upload.wikimedia.org/wikipedia/ar/f/f0/All_the_Money_in_the_World.png" width="220" height="342">
+    <h2>All the Money in the World 2017</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="5DkO7ksXY8E" data-toggle="modal" data-target="#trailer">
+    <img src="https://upload.wikimedia.org/wikipedia/ar/1/19/%D9%85%D9%84%D8%B5%D9%82_%D8%AF%D9%8A%D8%B1_%D8%B2%D9%8A%D9%86%D8%AF%D8%A7%D8%AC%D9%8A.jpg" width="220" height="342">
+    <h2>Dear Zindagi 2016</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="OvW_L8sTu5E" data-toggle="modal" data-target="#trailer">
+    <img src="https://upload.wikimedia.org/wikipedia/en/d/d6/Beauty_and_the_Beast_2017_poster.jpg" width="220" height="342">
+    <h2>Beauty and the Beast 2017</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="JXDlEw5u8u8" data-toggle="modal" data-target="#trailer">
+    <img src="http://photo.elcinema.com.s3.amazonaws.com/uploads/_315x420_446a76f838948f3082a883306f8d2c1165f20ae4b403b2c6e6f9b6f22748d257.jpg" width="220" height="342">
+    <h2>Ethel & Ernest (2016)</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="ViuDsy7yb8M" data-toggle="modal" data-target="#trailer">
+    <img src="http://photo.elcinema.com.s3.amazonaws.com/uploads/_315x420_b5f12b4273184d7a5990d33367c1c8a11e7b8d5f292d4a401a5ec624d1e51a5d.jpg" width="220" height="342">
+    <h2>Fantastic Beasts and Where to Find Them 2016</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="ZENmkJk9fBM" data-toggle="modal" data-target="#trailer">
+    <img src="http://photo.elcinema.com.s3.amazonaws.com/uploads/_315x420_ce88aede4d9e4860e1b6199c5758c01dec562f62fa6f1e47e8107b71d9df31a9.jpg" width="220" height="342">
+    <h2>Storks 2016</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="uQq3aFSijRg" data-toggle="modal" data-target="#trailer">
+    <img src="http://photo.elcinema.com.s3.amazonaws.com/uploads/_315x420_6567e438d3cd94c7898e315d0937f531363fea4959db57b11aed3240c41c0daf.jpg" width="220" height="342">
+    <h2>Goodbye Christopher Robin 2017</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="leE10vdvkho" data-toggle="modal" data-target="#trailer">
+    <img src="http://photo.elcinema.com.s3.amazonaws.com/uploads/_315x420_5c46a8003fd93d7ece1524dc3d3ddfabb1e811cf4e460d076ccb3e76462afd66.jpg" width="220" height="342">
+    <h2>Jumanji- Welcome to the Jungle 2017</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="Cpk1Gd2Red0" data-toggle="modal" data-target="#trailer">
+    <img src="http://photo.elcinema.com.s3.amazonaws.com/uploads/_315x420_c786ea74aef2647b124112e099d3d2c3be1e9354fb7b209a9aaf6db0e2648bd0.jpg" width="220" height="342">
+    <h2>Lady Macbeth 2016</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="3EW5OCJIAeg" data-toggle="modal" data-target="#trailer">
+    <img src="https://aradramatv.com/wp-content/uploads/2018/04/photo930195.jpg" width="220" height="342">
+    <h2>Little Forest 2018</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="gbug3zTm3Ws" data-toggle="modal" data-target="#trailer">
+    <img src="https://upload.wikimedia.org/wikipedia/ar/3/37/Logan_2017_poster.jpg" width="220" height="342">
+    <h2>Logan (2017)</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="AU4PNrZPvYA" data-toggle="modal" data-target="#trailer">
+    <img src="https://m.media-amazon.com/images/M/MV5BMTMwMmM3N2UtMWE4Yy00NjU3LWI5ZTgtNWNhOTc3OWY0MTNlXkEyXkFqcGdeQXVyMjQ4MTAyNTQ@._V1_.jpg" width="220" height="342">
+    <h2>House by the Lake 2017</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="orkPrGSAETs" data-toggle="modal" data-target="#trailer">
+    <img src="https://i2.wp.com/media.fushaar.com/media/2018/07/a0hFV8G0ofyPgPEjVcYrueuxFex.jpg?resize=329%2C495&ssl=1" width="220" height="342">
+    <h2>Bharat Ane Nenu (2018)</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="Q_P8WCbhC6s" data-toggle="modal" data-target="#trailer">
+    <img src="https://i2.wp.com/media.fushaar.com/media/2016/06/khDYdmPFlaTqeLQVD4ds4xC1mIf.jpg?resize=329%2C495&ssl=1" width="220" height="342">
+    <h2>Hush (2016)</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="A0KUWzfugg4" data-toggle="modal" data-target="#trailer">
+    <img src="http://photo.elcinema.com.s3.amazonaws.com/uploads/_315x420_4f43815afb5d39d659c0d5a5401336e8bce2a7b91f43e17e4770eeba704194c8.jpg" width="220" height="342">
+    <h2>Silence (2016)</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="r-61yYjKHHc" data-toggle="modal" data-target="#trailer">
+    <img src="http://photo.elcinema.com.s3.amazonaws.com/uploads/_315x420_9b8de016e26280bc44de14f2142b661c6274661b345c0636b030993e9e9c8f6f.jpg" width="220" height="342">
+    <h2>The Salesman 2016</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="gsVoD0pTge0" data-toggle="modal" data-target="#trailer">
+    <img src="https://upload.wikimedia.org/wikipedia/ar/7/74/Manchester_by_the_sea.jpg" width="220" height="342">
+    <h2>Manchester by the Sea (2016)</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="9NJj12tJzqc" data-toggle="modal" data-target="#trailer">
+    <img src="https://upload.wikimedia.org/wikipedia/ar/8/84/Moonlight_%282016_film%29.png" width="220" height="342">
+    <h2>Moonlight (2016)</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="-H1Ii1LjyFU" data-toggle="modal" data-target="#trailer">
+    <img src="http://photo.elcinema.com.s3.amazonaws.com/uploads/_315x420_1a4b1f217e52401f10e5e61066127e9031bd97bc354bf3354a7f1e328de16c29.jpg" width="220" height="342">
+    <h2>Nocturnal Animals 2016</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="KJXqh2rDehg" data-toggle="modal" data-target="#trailer">
+    <img src="https://upload.wikimedia.org/wikipedia/ar/thumb/f/f7/Patriots_Day_%28film%29.png/208px-Patriots_Day_%28film%29.png" width="220" height="342">
+    <h2>Patriots Day (2017)</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="EB6Gecy6IP8" data-toggle="modal" data-target="#trailer">
+    <img src="http://photo.elcinema.com.s3.amazonaws.com/uploads/_315x420_d8c6bc133701bb4a57ca0aff31bd167fe1d3ecca3033b0837aef5a32eedded31.jpg" width="220" height="342">
+    <h2>The Edge of Seventeen (2016)</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="rKHL5PyAPzs" data-toggle="modal" data-target="#trailer">
+    <img src="http://photo.elcinema.com.s3.amazonaws.com/uploads/_315x420_6f045a8759afde88cdfda4ad5636c39603ee75952b932c090966da7e3736f6ba.jpg" width="220" height="342">
+    <h2>Underworld- Blood Wars 2016</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="r7pGnfDvlWg" data-toggle="modal" data-target="#trailer">
+    <img src="https://www.faselhd.co/wp-content/uploads/2017/11/MV5BYjI2YzY3ODEtNTRlOS00YTQ5LWJlNDItMDgzZDZhMjQzNzk3XkEyXkFqcGdeQXVyNzkwOTM5MDk@._V1_SY1000_CR006771000_AL_-435x623.jpg" width="220" height="342">
+    <h2>Unrest 2017</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="s7WuKdVhrmA" data-toggle="modal" data-target="#trailer">
+    <img src="https://upload.wikimedia.org/wikipedia/ar/thumb/2/2e/Wind_River_%282017_film%29.png/219px-Wind_River_%282017_film%29.png" width="220" height="342">
+    <h2>Wind River (2017)</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="uzMEc37DGZA" data-toggle="modal" data-target="#trailer">
+    <img src="https://upload.wikimedia.org/wikipedia/ar/b/b2/Bad_Teacher_Poster.jpg" width="220" height="342">
+    <h2>Bad Teacher 2011 </h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="1BDxAsaoM1Y" data-toggle="modal" data-target="#trailer">
+    <img src="http://photo.elcinema.com.s3.amazonaws.com/uploads/_315x420_dc06258af169c2918c895bcbb28ba6148bf3dc6cf19385a57c19b76702ac7493.jpg" width="220" height="342">
+    <h2>Better Watch Out 2016</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="FNppLrmdyug" data-toggle="modal" data-target="#trailer">
+    <img src="https://upload.wikimedia.org/wikipedia/ar/d/df/BridesmaidsPoster.jpg" width="220" height="342">
+    <h2>Bridesmaids 2011</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="U9R679lvLeU" data-toggle="modal" data-target="#trailer">
+    <img src="http://photo.elcinema.com.s3.amazonaws.com/uploads/_315x420_fecae5add393bd41286f269ddda1cba98e805fdd553ac79f2f5ab2547f3e5510.jpg" width="220" height="342">
+    <h2>Ferdinand 2017</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="nuUkUlR7_q4" data-toggle="modal" data-target="#trailer">
+    <img src="http://aflamtube.com/uploads/posts/2016-09/1473703507_1poster.jpg" width="220" height="342">
+    <h2>Gimme Shelter 2013</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="wPx0sTyQ8cE" data-toggle="modal" data-target="#trailer">
+    <img src="http://www.jaewinter.net/wp-content/uploads/2016/11/Goodbye-Single.jpg" width="220" height="342">
+    <h2>Goodbye Single 2016</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="Ws74Ie4fMc8" data-toggle="modal" data-target="#trailer">
+    <img src="http://photo.elcinema.com.s3.amazonaws.com/uploads/_315x420_f191573c35da3f4a13cff5d2712ad659bf781e31a99cacc12047be13f82cd68b.jpg" width="220" height="342">
+    <h2>When the Bough Breaks 2016</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="RJJ2xphZjjA" data-toggle="modal" data-target="#trailer">
+    <img src="http://photo.elcinema.com.s3.amazonaws.com/uploads/_315x420_9225e86b2e873f1497ffa8daee651616687a1b7c19952ad4c38f7eed630c91f3.jpg" width="220" height="342">
+    <h2>I'm Not Ashamed 2016</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="ILDeA7AqA84" data-toggle="modal" data-target="#trailer">
+    <img src="http://photo.elcinema.com.s3.amazonaws.com/uploads/_315x420_25484fd6578d21d1b4cace65e986542856f490c9f568d40ba87e631f89cfdda0.jpg" width="220" height="342">
+    <h2>Mirror Mirror 2012</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="va-0o_xBVnU" data-toggle="modal" data-target="#trailer">
+    <img src="https://upload.wikimedia.org/wikipedia/ar/thumb/f/f2/Money_Monster_poster.png/223px-Money_Monster_poster.png" width="220" height="342">
+    <h2>Money Monster 2016</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="AL2TShb6fFs" data-toggle="modal" data-target="#trailer">
+    <img src="http://photo.elcinema.com.s3.amazonaws.com/uploads/_315x420_3b88b48f4d094964fec8ad67cf2aed26763af5f3b22ec47b0e3d659cfe7d653c.jpg" width="220" height="342">
+    <h2>Pink 2016 </h2>
+</div>
+
+    </div>
+  </body>
+</html>
