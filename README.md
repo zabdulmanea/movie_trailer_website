@@ -23,6 +23,3 @@ There are three python files:
 
 ## Copyright and License
 `fresh_tomatoes.py` supllied by [Udacity](https://sa.udacity.com/).
-
-
-
