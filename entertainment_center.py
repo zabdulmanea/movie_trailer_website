@@ -78,11 +78,6 @@ lady_macbeth = media.Movie(
     "http://photo.elcinema.com.s3.amazonaws.com/uploads/_315x420_c786ea74aef2647b124112e099d3d2c3be1e9354fb7b209a9aaf6db0e2648bd0.jpg",  # NOQA
     "https://www.youtube.com/watch?v=Cpk1Gd2Red0")
 
-life = media.Movie(
-    "Life 2017",
-    "https://upload.wikimedia.org/wikipedia/ar/1/13/%D9%85%D9%84%D8%B5%D9%82_%D9%81%D9%8A%D9%84%D9%85_%D8%AD%D9%8A%D8%A7%D8%A9_%282017%29.jpg",  # NOQA
-    "https://www.youtube.com/watch?v=dgOGqWHtjP0")
-
 little_forest = media.Movie(
     "Little Forest 2018",
     "https://aradramatv.com/wp-content/uploads/2018/04/photo930195.jpg",
@@ -220,7 +215,7 @@ house_by_lake = media.Movie(
 
 # create a list that contains favorite movies instances
 movies = [
-    life, distorted, game_night, isle_of_dogs, monster_calls, arrival,
+    distorted, game_night, isle_of_dogs, monster_calls, arrival,
     three_billboards, silent_voice, all_the_money, dear_zindagi,
     beauty_and_the_beast, ethel_and_ernest, fantastic_beasts, storks,
     goodbye_christopher, jumanji3, lady_macbeth, little_forest, logan,
