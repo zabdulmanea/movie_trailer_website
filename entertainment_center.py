@@ -208,19 +208,14 @@ hush = media.Movie(
     "https://i2.wp.com/media.fushaar.com/media/2016/06/khDYdmPFlaTqeLQVD4ds4xC1mIf.jpg?resize=329%2C495&ssl=1",  # NOQA
     "https://www.youtube.com/watch?v=Q_P8WCbhC6s")
 
-house_by_lake = media.Movie(
-    "House by the Lake 2017",
-    "https://m.media-amazon.com/images/M/MV5BMTMwMmM3N2UtMWE4Yy00NjU3LWI5ZTgtNWNhOTc3OWY0MTNlXkEyXkFqcGdeQXVyMjQ4MTAyNTQ@._V1_.jpg",  # NOQA
-    "https://www.youtube.com/watch?v=AU4PNrZPvYA")
-
 # create a list that contains favorite movies instances
 movies = [
     distorted, game_night, isle_of_dogs, monster_calls, arrival,
     three_billboards, silent_voice, all_the_money, dear_zindagi,
     beauty_and_the_beast, ethel_and_ernest, fantastic_beasts, storks,
-    goodbye_christopher, jumanji3, lady_macbeth, little_forest, logan,
-    house_by_lake, bharat, hush, silence, salesman, manchester_by_the_sea,
-    moonlight, nocturnal_animals, patriots_day, edge_of_17, underworld, unrest,
+    goodbye_christopher, jumanji3, lady_macbeth, little_forest, logan, bharat,
+    hush, silence, salesman, manchester_by_the_sea, moonlight,
+    nocturnal_animals, patriots_day, edge_of_17, underworld, unrest,
     wind_river, bad_teacher, better_watch_out, bridesmaids, ferdinand,
     gimme_shelter, goodbye_single, when_the_bough, im_not_shamed,
     mirror_mirror, money_monster, pink
