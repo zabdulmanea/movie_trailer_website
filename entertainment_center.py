@@ -113,11 +113,6 @@ silence = media.Movie(
     "http://photo.elcinema.com.s3.amazonaws.com/uploads/_315x420_4f43815afb5d39d659c0d5a5401336e8bce2a7b91f43e17e4770eeba704194c8.jpg",  # NOQA
     "https://www.youtube.com/watch?v=A0KUWzfugg4")
 
-edge_of_17 = media.Movie(
-    "The Edge of Seventeen (2016)",
-    "http://photo.elcinema.com.s3.amazonaws.com/uploads/_315x420_d8c6bc133701bb4a57ca0aff31bd167fe1d3ecca3033b0837aef5a32eedded31.jpg",  # NOQA
-    "https://www.youtube.com/watch?v=EB6Gecy6IP8")
-
 salesman = media.Movie(
     "The Salesman 2016",
     "http://photo.elcinema.com.s3.amazonaws.com/uploads/_315x420_9b8de016e26280bc44de14f2142b661c6274661b345c0636b030993e9e9c8f6f.jpg",  # NOQA
@@ -215,7 +210,7 @@ movies = [
     beauty_and_the_beast, ethel_and_ernest, fantastic_beasts, storks,
     goodbye_christopher, jumanji3, lady_macbeth, little_forest, logan, bharat,
     hush, silence, salesman, manchester_by_the_sea, moonlight,
-    nocturnal_animals, patriots_day, edge_of_17, underworld, unrest,
+    nocturnal_animals, patriots_day, underworld, unrest,
     wind_river, bad_teacher, better_watch_out, bridesmaids, ferdinand,
     gimme_shelter, goodbye_single, when_the_bough, im_not_shamed,
     mirror_mirror, money_monster, pink
