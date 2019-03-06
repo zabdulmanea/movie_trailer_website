@@ -80,7 +80,7 @@ lady_macbeth = media.Movie(
 
 little_forest = media.Movie(
     "Little Forest 2018",
-    "https://aradramatv.com/wp-content/uploads/2018/04/photo930195.jpg",
+    "https://i.pinimg.com/736x/54/7c/d3/547cd36da8d7748b505576e73d0e97e0.jpg?b=t",
     "https://www.youtube.com/watch?v=3EW5OCJIAeg")
 
 logan = media.Movie(
@@ -95,7 +95,7 @@ manchester_by_the_sea = media.Movie(
 
 moonlight = media.Movie(
     "Moonlight (2016)",
-    "https://i.pinimg.com/736x/54/7c/d3/547cd36da8d7748b505576e73d0e97e0.jpg?b=t",  # NOQA
+    "https://upload.wikimedia.org/wikipedia/ar/8/84/Moonlight_%282016_film%29.png",  # NOQA
     "https://www.youtube.com/watch?v=9NJj12tJzqc")
 
 nocturnal_animals = media.Movie(
