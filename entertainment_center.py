@@ -95,7 +95,7 @@ manchester_by_the_sea = media.Movie(
 
 moonlight = media.Movie(
     "Moonlight (2016)",
-    "https://upload.wikimedia.org/wikipedia/ar/8/84/Moonlight_%282016_film%29.png",  # NOQA
+    "https://i.pinimg.com/736x/54/7c/d3/547cd36da8d7748b505576e73d0e97e0.jpg?b=t",  # NOQA
     "https://www.youtube.com/watch?v=9NJj12tJzqc")
 
 nocturnal_animals = media.Movie(
