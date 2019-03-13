@@ -188,11 +188,6 @@ storks = media.Movie(
     "http://photo.elcinema.com.s3.amazonaws.com/uploads/_315x420_ce88aede4d9e4860e1b6199c5758c01dec562f62fa6f1e47e8107b71d9df31a9.jpg",  # NOQA
     "https://www.youtube.com/watch?v=ZENmkJk9fBM")
 
-when_the_bough = media.Movie(
-    "When the Bough Breaks 2016",
-    "http://photo.elcinema.com.s3.amazonaws.com/uploads/_315x420_f191573c35da3f4a13cff5d2712ad659bf781e31a99cacc12047be13f82cd68b.jpg",  # NOQA
-    "https://www.youtube.com/watch?v=Ws74Ie4fMc8")
-
 bharat = media.Movie(
     "Bharat Ane Nenu (2018)",
     "https://i2.wp.com/media.fushaar.com/media/2018/07/a0hFV8G0ofyPgPEjVcYrueuxFex.jpg?resize=329%2C495&ssl=1",  # NOQA
@@ -212,7 +207,7 @@ movies = [
     hush, silence, salesman, manchester_by_the_sea, moonlight,
     nocturnal_animals, patriots_day, underworld, unrest,
     wind_river, bad_teacher, better_watch_out, bridesmaids, ferdinand,
-    gimme_shelter, goodbye_single, when_the_bough, im_not_shamed,
+    gimme_shelter, goodbye_single, im_not_shamed,
     mirror_mirror, money_monster, pink
 ]
 
